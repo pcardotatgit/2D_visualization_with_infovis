@@ -170,6 +170,8 @@ This node is the parent of a children node that will be defined as the value of 
 
 And the **children** key is the one that creates the relationship between the current node and it's children node.
 
+![](./assets/images/image-4.png)
+
 The **children** value must be another object with exactly the same keys and values.
 
 - **id** : any string and must be unique
