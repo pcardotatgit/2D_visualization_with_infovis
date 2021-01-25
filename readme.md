@@ -176,8 +176,48 @@ The **children** value must be another object with exactly the same keys and val
 
 - **id** : any string and must be unique
 - **name** : a string. this string can be html. ' example : name: "\<img src='../img/host.gif'\> hostname",
-- **data** : contains a variable named 
-- **relation**. That one contains html content that is displayed on the right div named \<div id="right-container"\>. This div is one component of the index.html file. This content is displayed when the central object is selected. You can put here any relevant html content related to the selected object.
+- **data** : contains relation and childrens
+- **relation** : That one contains html content that is displayed on the right div named \<div id="right-container"\>. This div is one component of the index.html file. This content is displayed when the central object is selected. You can put here any relevant html content related to the selected object.
+- **children**: is a list of nodes that have exactly the same data structure as their parent. Children can contains several sub nodes. Subnodes must separated by a comma. These childrens can also have children. If there is no sub children this variable 
+
+**example :**
+```
+{
+	id: "0082",
+	name: "<img src='../img/host.gif'> 201.1.171.89",
+	data :{ relation:"<h3>is traffic destination</h3><li>IP : 201.1.171.89</li><li> Attached Ports : <ul><li>TCP-16471</li><li>UDP-16471</li></ul></li><br><A HREF = '../z_base_objects/z_objects_datagrid_en-B.php?sens=source&mac=0a:b4:df:27:c2:b0&ipaddr=201.1.171.89\&ports=TCP:16471;UDP:16471;' >(1)Add to Object Data Base</a>"
+	},
+	children: [
+		{
+			id: "0083",
+			name: "TCP",
+			data :{ relation:""
+			},
+			children: [
+				{
+					id: "0084",
+					name: "16471",
+					data :{ relation:""
+					},
+					children: []
+				}]
+		},
+		{
+			id: "0085",
+			name: "UDP",
+			data :{ relation:""
+			},
+			children: [
+				{
+					id: "0086",
+					name: "16471",
+					data :{ relation:""
+					},
+					children: []
+				}]
+		}]
+},
+```
 
 ## Example
 
